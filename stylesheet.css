@@ -377,7 +377,7 @@ section{
   border: 7px solid transparent;
   border-bottom-width: 0px;
   border-right-width: 0px;
-  border-top-color: #000;
+  border-top-color: black;
   top: -10px;
   right: 0;
   animation: showText 0.5s 1.5s linear forwards;
@@ -411,7 +411,8 @@ section{
 }
 .radial-bars .radial-bar .progress-bar{
   stroke-width: 10;
-  stop-color: black;
+  stroke: black;
+  /* stop-color: black; */
   fill: transparent;
   stroke-dasharray: 502;
   stroke-dashoffset: 502;
@@ -476,6 +477,14 @@ section{
   font-weight: 500;
   animation: showText 0.5s linear forwards;
   opacity: 0;
+}
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .main-text{
   padding-top: 130px;
@@ -661,9 +670,13 @@ section{
   0 0 25px #0ef;
 }
 .contact-form form .send:hover{
-  box-sizing: 0 0 5px cyan,
+  background: #0ef;
+  color: black;
+  box-shadow: 0 0 20px #0ef;
+  cursor: pointer;
+  /* box-sizing: 0 0 5px cyan,
   0 0 25px cyan, 0 0 50px cyan,
-  0 0 100px cyan, 0 0 200px cyan;
+  0 0 100px cyan, 0 0 200px cyan; */
 }
 .last-text p{
   width: 100%;
